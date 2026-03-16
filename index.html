@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Futuro Sustentável - Trabalho Acadêmico</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Oswald:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="loader">
+        <div class="spinner"></div>
+    </div>
+
+    <header id="main-header">
+        <div class="container nav-container">
+            <div class="logo">
+                <span class="icon-leaf">🌿</span> SUSTENTA<b>BILIDADE</b>
+            </div>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#intro">Conceitos</a></li>
+                    <li><a href="#producao">Produção</a></li>
+                    <li><a href="#energia">Matriz Energética</a></li>
+                    <li><a href="#tecnologia">Inovações</a></li>
+                    <li><a href="#cidades">Cidades</a></li>
+                    <li><a href="#ods">Metas ODS</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+            <div class="nav-utils">
+                <button id="dark-mode-toggle" title="Alternar Tema">🌓</button>
+            </div>
+        </div>
+    </header>
+
+    <section id="home" class="hero-section full-height">
+        <div class="parallax-bg"></div>
+        <div class="hero-content container">
+            <h1 class="reveal-up">Futuro Sustentável</h1>
+            <p class="reveal-up delay-1">O Equilíbrio Vital entre a Produção Industrial e a Preservação do Meio Ambiente[cite: 1].</p>
+            <div class="hero-btns reveal-up delay-2">
+                <a href="#intro" class="btn btn-primary">Começar Jornada</a>
+                <a href="#contato" class="btn btn-outline">Saiba Mais</a>
+            </div>
+        </div>
+        <div class="scroll-down"></div>
+    </section>
+
+    <section id="intro" class="section-padding bg-dark">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="subtitle">Visão Geral</span>
+                <h2>Consciência Ecológica</h2>
+                <div class="line"></div>
+            </div>
+            <div class="grid-2">
+                <div class="img-wrapper reveal-left">
+                    <img src="slide3_globo.jpg" alt="Planeta Sustentável">
+                </div>
+                <div class="text-wrapper reveal-right">
+                    <p>Atualmente, o desafio global é manter o ritmo de produção sem comprometer os recursos das futuras gerações. [cite: 1]</p>
+                    <ul class="check-list">
+                        <li>Eficiência no uso de matéria-prima.</li>
+                        <li>Minimização de resíduos tóxicos.</li>
+                        <li>Proteção da biodiversidade local.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="energia" class="section-padding">
+        <div class="container">
+            <h2 class="text-center">Matriz Energética Limpa</h2>
+            <div class="tabs-container">
+                <div class="tabs-header">
+                    <button class="tab-link active" onclick="openTab(event, 'Solar')">Solar</button>
+                    <button class="tab-link" onclick="openTab(event, 'Eolica')">Eólica</button>
+                    <button class="tab-link" onclick="openTab(event, 'Hidrica')">Hídrica</button>
+                </div>
+                <div id="Solar" class="tab-content active">
+                    <h3>Energia Fotovoltaica</h3>
+                    <p>O uso de painéis solares para converter luz em eletricidade[cite: 1, 2].</p>
+                </div>
+                <div id="Eolica" class="tab-content">
+                    <h3>Energia dos Ventos</h3>
+                    <p>Turbinas eólicas que aproveitam correntes de ar para gerar energia limpa[cite: 1].</p>
+                </div>
+                <div id="Hidrica" class="tab-content">
+                    <h3>Pequenas Centrais</h3>
+                    <p>Aproveitamento do fluxo de água com menor impacto ambiental que grandes barragens.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="cidades" class="section-padding bg-purple-gradient">
+        <div class="container">
+            <h2 class="text-white text-center">Infraestrutura Urbana Moderna</h2>
+            <div class="cards-grid">
+                <div class="info-card reveal-up">
+                    <div class="card-icon">🏠</div>
+                    <h3>Casas Verdes</h3>
+                    <p>Residências equipadas com automação para economia de energia[cite: 3].</p>
+                </div>
+                <div class="info-card reveal-up delay-1">
+                    <div class="card-icon">🚗</div>
+                    <h3>Mobilidade Elétrica</h3>
+                    <p>Expansão de frotas de veículos que não emitem CO2.</p>
+                </div>
+                <div class="info-card reveal-up delay-2">
+                    <div class="card-icon">🌳</div>
+                    <h3>Urbanismo</h3>
+                    <p>Criação de corredores verdes no centro das cidades.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="ods" class="section-padding">
+        <div class="container">
+            <div class="counters-grid">
+                <div class="counter-item">
+                    <h3 class="counter-num" data-target="85">0</h3>
+                    <p>% de Redução de Emissões</p>
+                </div>
+                <div class="counter-item">
+                    <h3 class="counter-num" data-target="2030">0</h3>
+                    <p>Meta Global</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2026 - Futuro Sustentável. Trabalho desenvolvido para fins educativos.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

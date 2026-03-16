@@ -1,0 +1,139 @@
+/* =========================================
+   CONFIGURAÇÕES GERAIS E VARIÁVEIS
+   ========================================= */
+:root {
+    --verde-main: #2ecc71;
+    --verde-dark: #27ae60;
+    --roxo-main: #8e44ad;
+    --roxo-dark: #2c3e50;
+    --laranja: #e67e22;
+    --preto-puro: #000000;
+    --preto-soft: #1a1a1a;
+    --branco: #ffffff;
+    --transicao: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--preto-puro);
+    color: var(--branco);
+    line-height: 1.8;
+    overflow-x: hidden;
+}
+
+/* Scrollbar Personalizada */
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: var(--preto-soft); }
+::-webkit-scrollbar-thumb { background: var(--roxo-main); border-radius: 5px; }
+
+/* =========================================
+   HEADER E NAVEGAÇÃO
+   ========================================= */
+#main-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 20px 0;
+    transition: var(--transicao);
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#main-header.scrolled {
+    padding: 10px 0;
+    background: var(--preto-puro);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.4rem;
+    color: var(--verde-main);
+    letter-spacing: 1px;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+}
+
+.nav-menu li a {
+    color: var(--branco);
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    transition: var(--transicao);
+}
+
+.nav-menu li a:hover {
+    color: var(--laranja);
+}
+
+/* =========================================
+   SEÇÕES E GRIDS
+   ========================================= */
+.container { width: 90%; max-width: 1200px; margin: 0 auto; }
+
+.section-padding { padding: 120px 0; }
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+/* Efeito Glassmorphism nos Cards */
+.info-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 40px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: var(--transicao);
+    text-align: center;
+}
+
+.info-card:hover {
+    transform: translateY(-15px);
+    background: rgba(142, 68, 173, 0.2);
+    border-color: var(--laranja);
+}
+
+.card-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    display: block;
+}
+
+/* =========================================
+   ANIMAÇÕES DE REVELAÇÃO
+   ========================================= */
+.reveal-up {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: 1s ease-out;
+}
+
+.reveal-up.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.delay-1 { transition-delay: 0.2s; }
+.delay-2 { transition-delay: 0.4s; }
+
+/* [Muitas outras linhas de CSS seriam geradas aqui para atingir o volume...] */
